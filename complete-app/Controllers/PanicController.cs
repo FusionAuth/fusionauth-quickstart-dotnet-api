@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MyAPI.Models;
 
 namespace MyAPI.Controllers;
 
@@ -10,9 +11,8 @@ public class PanicController : ControllerBase
    
     [HttpPost]
     [Authorize(Roles = "teller")]
-    [Authorize]
-    public string Post()
+    public PanicResponse Post()
     {
-        return "We've called the police!";
+        return new PanicResponse("We've called the police!");
     }
 }
