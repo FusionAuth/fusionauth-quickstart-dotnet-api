@@ -29,7 +29,7 @@ jobs:
         dotnet-version: [ '7.0.x' ]
     defaults:
       run:
-        working-directory: ./complete-app/MyApp
+        working-directory: ./complete-app/
 
     # timeout after a certain period
     timeout-minutes: 5
