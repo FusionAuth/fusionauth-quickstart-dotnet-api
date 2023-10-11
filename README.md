@@ -40,7 +40,7 @@ The `complete-app` directory contains a minimal ASP.NET API configured to authen
 
 Run the API with:
 ```
-cd complete-app/
+cd complete-application/
 dotnet run
 ```
 
@@ -72,6 +72,7 @@ or
 curl --location --request POST 'http://localhost:5001/panic' \
 --cookie 'app.at=<your_token>'
 ```
+
 To call with a bearer token in the `Authorization` header, you can call:
 
 ```sh

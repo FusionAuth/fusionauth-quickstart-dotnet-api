@@ -1,14 +1,13 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyAPI.Models;
+using Models;
 
-namespace MyAPI.Controllers;
+namespace Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class PanicController : ControllerBase
 {
-   
     [HttpPost]
     [Authorize(Roles = "teller")]
     public PanicResponse Post()

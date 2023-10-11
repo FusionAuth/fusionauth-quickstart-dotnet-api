@@ -1,16 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MyAPI.Models;
+using Models;
 
-namespace MyAPI.Controllers
+namespace Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class MakeChangeController : ControllerBase
     {
-
         [HttpGet]
-        [Authorize(Roles ="teller,customer")]
+        [Authorize(Roles = "teller,customer")]
         public Change Get(double total)
         {
             var change = new Change();
@@ -22,4 +21,3 @@ namespace MyAPI.Controllers
         }
     }
 }
-
