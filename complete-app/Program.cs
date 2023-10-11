@@ -15,29 +15,11 @@ builder.Services.AddAuthentication()
             OnMessageReceived = context =>
             {
                 // Extract the token from a cookie if available.
-                context.Token = context.Request.Cookies["app.idt"];
+                context.Token = context.Request.Cookies["app.at"];
                 return Task.CompletedTask;
             }
         };
     });
-builder.Services.AddAuthorization(options =>
-    options.AddPolicy("ApiScope", policy =>
-    {
-        policy.RequireAuthenticatedUser();
-        //policy.RequireClaim("scope", "api1");
-    })
-);
-
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy(name: "AllowLocalFrontendCORS",
-//                      policy =>
-//                      {
-//                          policy
-//                            .WithOrigins("http://localhost:3000")
-//                            .AllowCredentials();
-//                      });
-//});
 
 var app = builder.Build();
 
@@ -48,7 +30,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseCors("AllowLocalFrontendCORS");
 //app.UseHttpsRedirection();
 
 app.UseAuthentication();

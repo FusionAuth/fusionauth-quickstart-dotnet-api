@@ -4,11 +4,13 @@ using MyAPI.Models;
 
 namespace MyAPI.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class MakeChangeController : ControllerBase
     {
 
         [HttpGet]
-        [Authorize(Roles ="teller,customers")]
+        [Authorize(Roles ="teller,customer")]
         public Change Get(double total)
         {
             var change = new Change();
