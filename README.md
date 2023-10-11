@@ -34,9 +34,9 @@ FusionAuth will be initially configured with these settings:
 
 You can log into the [FusionAuth admin UI](http://localhost:9011/admin) and look around if you want, but with Docker/Kickstart you don't need to.
 
-### ASP.NET API complete-app
+### ASP.NET API complete-application
 
-The `complete-app` directory contains a minimal ASP.NET API configured to authenticate with locally running FusionAuth.
+The `complete-application` directory contains a minimal ASP.NET API configured to authenticate with locally running FusionAuth.
 
 Run the API with:
 ```
