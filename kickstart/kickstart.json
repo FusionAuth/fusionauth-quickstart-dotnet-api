@@ -22,6 +22,17 @@
   "requests": [
     {
       "method": "PATCH",
+      "url": "api/system-configuration",
+      "body": {
+        "systemConfiguration": {
+          "usageDataConfiguration": {
+            "enabled": true
+          }
+        }
+      }
+    },
+    {
+      "method": "PATCH",
       "url": "/api/tenant/#{defaultTenantId}",
       "body": {
         "tenant": {
